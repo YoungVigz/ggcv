@@ -1,0 +1,44 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+    background-color: #212121; 
+}
+
+.contactContainer {
+    position: relative;
+    -webkit-box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.75);
+    width: 45vw;
+    height: 55vh;
+    border: 10px solid #71DB77;
+    border-radius: 10px;
+}
+
+.contactContainer > h1 {
+    text-align: center;
+    color: white;
+}
+
+.contactForm {
+    width: 35%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contactFormInput > input {
+    width: 100%;
+}
+
+.contactFormInput > textarea {
+    width: 99.25%;
+}
+
+.contactButton {
+    width: 101.5%;
+}

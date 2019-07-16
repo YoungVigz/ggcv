@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-color: #212121;
+}
+
+.logo {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.brand {    
+    width: 10vw;
+    height: 10vw;
+    margin: auto;
+    margin-bottom: 6vh;
+    border: 0.5vw solid #71DB77;
+}
+
+.logoText {
+    font-size: 4rem;
+    color: #71DB77;
+}
