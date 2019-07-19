@@ -7,10 +7,14 @@ import { TimelineMax } from 'gsap';
 class Footer extends Component {
     state = {
         animation: false,
-        animationEnds: true
+        animationEnds: true,
+        date: 2019
     }
 
     componentDidMount() {
+        const date = new Date();
+        this.setState({date: date.getFullYear()});
+
         window.addEventListener('scroll', (e) => {
             const footer = document.querySelector('footer');
             const scrollTop = e.target.documentElement.scrollTop;
@@ -40,13 +44,13 @@ class Footer extends Component {
     render() {
         return (
             <div>
-                <p className="footerText">Gabriel Gałęza &copy; 2019</p>
-                <p className="socialIcons">
+                <div className="footerText">Gabriel Gałęza &copy; {this.state.date}</div>
+                <div className="socialIcons">
                     <a href="https://www.facebook.com/profile.php?id=100009772031819" target="blank"><FontAwesomeIcon icon={faFacebookSquare} className="socialIcon"/></a>    
                     <a href="https://www.instagram.com/mcgabi__/" target="blank"><FontAwesomeIcon icon={faInstagram} className="socialIcon"/></a>
                     <a href="https://github.com/MCgabi" target="blank"><FontAwesomeIcon icon={faGithub} className="socialIcon"/></a>
                     <a href="https://discordapp.com/" target="blank"><FontAwesomeIcon icon={faDiscord} className="socialIcon"/></a>
-                </p>
+                </div>
             </div>
         );
     }

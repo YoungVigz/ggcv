@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { TimelineMax } from 'gsap';
 import './Header.scss';
+import ReactSVG from 'react-svg';
+import logo from '../../logo.svg';
 
 class Header extends Component {
     state = {
@@ -30,16 +32,17 @@ class Header extends Component {
         const logo = document.querySelector('.logo');
         const tl = new TimelineMax();
 
-        tl.set(logo, {display: 'block'}).from(brand, 2, { y: -window.innerHeight, rotation: 360}).from(logoTexts, 2, { opacity: 0 }, "-=2");
+        tl.set(logo, {display: 'block'}).from(brand, 2, { y: -window.innerHeight, opacity: 0}).from(logoTexts, 2, { opacity: 0 }, "-=2");
         setTimeout(() => this.setState({animationEnds: true}), 2000);
     }
 
     render() {
         return (
             <div className="logo">
-                <div className="brand"></div>
-                <span className="logoText">Gabriel </span>
-                <span className="logoText">Gałęza</span>
+                <ReactSVG src={logo} className="brand"/>
+                <div className="logoText">
+                    Gabriel Gałęza
+                </div>
             </div>
         );
     }

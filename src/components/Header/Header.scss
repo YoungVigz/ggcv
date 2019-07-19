@@ -16,14 +16,16 @@ header {
 
 
 .brand {    
-    width: 10vw;
-    height: 10vw;
     margin: auto;
-    margin-bottom: 6vh;
-    border: 0.5vw solid #71DB77;
+    padding-bottom: 2vh;
+}
+
+svg {
+    transform: scale(0.85);
 }
 
 .logoText {
+    text-align: center;
     font-size: 4rem;
     color: #71DB77;
 }

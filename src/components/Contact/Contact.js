@@ -34,26 +34,32 @@ class Contact extends Component {
         setTimeout(() => this.setState({animationEnds: true}), 2000);
     }
 
+    sendEmail(e) {
+        e.preventDefault();
+    }
+
     render() {
         return (
             <div className="contactContainer">
                 <h1>Contact with me! </h1>
 
                 <div className="contactForm">
-                    <form>
+                    <form onSubmit={this.sendEmail}>
                         <div className="contactFormInput">
-                            <input />
+                            <input maxLength="30" placeholder="Name"/>
                         </div>
                         
                         <div className="contactFormInput">
-                            <input />
+                            <input maxLength="30" placeholder="Email"/>
                         </div>
                         
-                        <div className="contactFormInput">
-                            <textarea />
+                        <div className="contactFormTextarea">
+                            <textarea rows="7" placeholder="Text.."/>
                         </div>
 
-                        <button className="contactButton">Send me a mail!</button>
+                        <div className="contactFormButton">
+                            <button className="contactButton">Send me a mail!</button>
+                        </div>  
                     </form>
                 </div>
             </div>
