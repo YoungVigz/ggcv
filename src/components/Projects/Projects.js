@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import "./Projects.scss";
 import Axios from 'axios';
 
 class Projects extends Component {
@@ -53,48 +52,53 @@ class Projects extends Component {
     }
 
     render() {
-    const { repos, currentPage, reposPerPage } = this.state;
-    
-    while(repos.length % this.state.reposPerPage !== 0) {
-        this.state.repos.push([]);
-    }
+        const { repos, currentPage, reposPerPage } = this.state;
+        
+        while(repos.length % this.state.reposPerPage !== 0) {
+            this.state.repos.push([]);
+        }
 
-    const indexOfLastRepo = currentPage * reposPerPage;
-    const indexOfFirstRepo = indexOfLastRepo - reposPerPage;
-    const currentRepos = repos.slice(indexOfFirstRepo, indexOfLastRepo);
+        const indexOfLastRepo = currentPage * reposPerPage;
+        const indexOfFirstRepo = indexOfLastRepo - reposPerPage;
+        const currentRepos = repos.slice(indexOfFirstRepo, indexOfLastRepo);
 
-    return (
-      <div>
-        <h1 className="overview">My profession as Full-Stack developer:</h1>
-        <p className="overview">JavaScript, Node.js, React.js, Express.js, Golang and many more!</p>
-        <div className="projectsWrapper">
-            <h1 className="textCenter">My projects:</h1>
-            <table>
-                <tbody tr="5">
-                    <tr>
-                        <td><div className="repoDescription boldFont">Name</div></td>
-                        <td><div className="repoDescription boldFont">Language</div></td>
-                        <td><div className="repoDescription boldFont">Stars</div></td>
-                        <td><div className="repoDescription boldFont">Description</div></td>
-                    </tr>
-                    {currentRepos.map((repo, index) => (
-                        <tr key={index}>
-                            <td><a href={repo[1]} target="blank" className="repoLink"><div className="repoDescription">{repo[0] || '-'}</div></a></td>
-                            <td><div className="repoDescription">{repo[2] || '-'}</div></td>
-                            <td><div className="repoDescription">{repo[3] || '0'}</div></td>
-                            <td><div className="repoDescription">{repo[4] || '-'}</div></td>
-                        </tr>  
-                    ))}
-                </tbody>
-            </table>
-            <div className="numberSelectorWrapper">
-                <button onClick={this.changePageToPrevious}>Previous</button>
-                <button onClick={this.changePageToNext}>Next</button>
+        return (
+            <div className="container mx-auto px-6 py-16 pb-40">
+                <div className="flex justify-center items-center flex-col">
+                    <h1 className="font-semibold text-2xl sm:text-3xl md:text-4xl mb-16">My projects:</h1>
+                    <table className="text-left w-full border-collapse">
+                        <thead>
+                            <tr className="uppercase text-xs text-grey-dark border-b border-grey-light">
+                                <th className="py-4 min-w-th max-w-th font-semibold">Name</th>
+                                <th className="py-4 min-w-th max-w-th font-semibold">Language</th>
+                                <th className="py-4 min-w-th max-w-th font-semibold">Stars</th>
+                                <th className="py-4 min-w-th max-w-th font-semibold hidden sm:block">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {currentRepos.map((repo, index) => (
+                                <tr className="border-b border-grey-light font-semibold text-xs text-grey-dark " key={index}>
+                                    <th>
+                                        <a href={repo[1]} target="blank">
+                                            <div className="py-4 min-w-th max-w-th truncate">{repo[0] || '-'}</div>
+                                        </a>
+                                    </th>
+                                    <th><div className="py-4 min-w-th max-w-th truncate">{repo[2] || '-'}</div></th>
+                                    <th><div className="py-4 min-w-th max-w-th truncate">{repo[3] || '0'}</div></th>
+                                    <td><div className="py-4 min-w-th max-w-th truncate hidden sm:block">{repo[4] || '-'}</div></td>
+                                </tr>  
+                            ))}
+                        </tbody>
+                    </table>
+                    <div className="mt-12">
+                        <button onClick={this.changePageToPrevious} className="projectBtn bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l outline-none hover:bg-gray-400">Prev</button>
+                        <button onClick={this.changePageToNext} className="projectBtn bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l outline-none hover:bg-gray-400">Next</button>
+                    </div>
+                </div>
             </div>
-        </div>
-      </div>
-    );
+        );
     }
 }
+ 
 
 export default Projects;
