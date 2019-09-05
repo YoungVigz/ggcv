@@ -9,7 +9,7 @@ class Footer extends Component {
 
     componentDidMount() {
         const date = new Date();
-        this.setState({date: date.getFullYear()});
+        this.setState({date: date.getFullYear()})
     }
 
     render() {
@@ -18,16 +18,16 @@ class Footer extends Component {
                 <div className="container mx-auto py-10 flex justify-center items-center flex-col">
                     <h1 className="font-semibold text-white text-xl sm:text-2xl md:text-3xl mb-4">Gabriel Gałęza &copy; {this.state.date}</h1>
                     <div className="text-white">
-                        <a href="https://www.facebook.com/profile.php?id=100009772031819" target="blank">
+                        <a href="https://www.facebook.com/profile.php?id=100009772031819" className="social__icon" target="blank">
                             <FontAwesomeIcon icon={faFacebookSquare} className="mx-2 text-xl sm:text-2xl md:text-3xl"/>
                         </a>    
-                        <a href="https://www.instagram.com/mcgabi__/" target="blank">
+                        <a href="https://www.instagram.com/mcgabi__/" className="social__icon" target="blank">
                             <FontAwesomeIcon icon={faInstagram} className="mx-2 text-xl sm:text-2xl md:text-3xl"/>
                         </a>
-                        <a href="https://github.com/MCgabi" target="blank">
+                        <a href="https://github.com/MCgabi" className="social__icon" target="blank">
                             <FontAwesomeIcon icon={faGithub} className="mx-2 text-xl sm:text-2xl md:text-3xl"/>
                         </a>
-                        <a href="https://discordapp.com/" target="blank">
+                        <a href="https://discordapp.com/" className="social__icon" target="blank">
                             <FontAwesomeIcon icon={faDiscord} className="mx-2 text-xl sm:text-2xl md:text-3xl"/>
                         </a>
                     </div>

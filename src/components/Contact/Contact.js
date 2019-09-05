@@ -24,7 +24,7 @@ class Contact extends Component {
                                 <label className="mb-2 uppercase font-bold text-lg text-grey-darkest">Message</label>
                                 <textarea className="border py-2 px-3 text-black rounded resize-none" rows="9" name="message" id="message"/>
                             </div>
-                            <button className="projectBtn block bg-teal-600 hover:bg-teal-700 text-white uppercase text-lg mx-auto p-4 rounded" type="submit">Create Account</button>
+                            <button className="projectBtn block bg-teal-600 hover:bg-teal-700 text-white uppercase text-lg mx-auto p-4 rounded" type="submit">Send your message!</button>
                         </form>
                     </div>
                 </div>
