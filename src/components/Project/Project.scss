@@ -1,0 +1,58 @@
+@import '../../styles/variables.scss';
+
+.project {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+
+    &__table {
+        margin-bottom: 25px;
+        width: 275px;
+        &__head {
+            &__item {
+                font-size: 18px;
+                color: $primary-color;
+                
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+
+        &__body {
+            &__item {
+                font-size: 12px;
+
+                &:last-child {
+                    text-align: right;
+                }
+
+                a {
+                    color: black;
+                }
+            }
+        }
+    }
+
+    
+    @media (min-width: $medium) {
+        &__table {
+            width: 350px;
+
+            &__head {
+                &__item {
+                    font-size: 24px;
+                }
+            }
+    
+            &__body {
+                &__item {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import '../../styles/variables.scss';
+
+.contact {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    &__headline {
+        font-size: 21px;
+        margin-bottom: 15px;
+
+        &--primary {
+            color: $primary-color;
+        }
+    }
+
+    &__text {
+        font-size: 17px;
+    }
+
+
+    @media (min-width: $medium) {
+        &__headline {
+            font-size: 31.5px;
+        }
+
+        &__text {
+            font-size: 25.5px;
+        }
+    }
+}
+

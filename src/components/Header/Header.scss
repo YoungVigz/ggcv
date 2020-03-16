@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.header {
+    width: 100vw;
+    height: 10vh;
+    background-color: $primary-color;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        margin-left: 2.5vw;
+    }
+
+    &__nav { 
+        display: none;
+
+        &__link a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    &__menu { 
+        display: none;
+    }
+
+    @media (min-width: $medium) {
+        &__nav {
+
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+}
