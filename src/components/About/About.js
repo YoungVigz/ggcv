@@ -18,11 +18,11 @@ function About() {
             <span className="about__headline--primary"> Gabriel!</span>
           </div>
           <div className="about__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Integer tempor ligula sit amet elit facilisis, quis pulvinar dolor convallis. 
-            Praesent ut sagittis mi. Quisque sit amet euismod nulla.
-            Suspendisse in vestibulum lacus, eu condimentum leo. Pellentesque efficitur 
-            varius massa, nec maximus ante eleifend sit amet.
+            I am 17 years old. I am from Poland.
+            I treat programming as my hobby, but it is also my work.
+            My other interests are music, terraristics, rollerblades/ice skates, culture of Japan.
+            My programming stack: JavaScript/Node.js, React, GraphQL, Go-lang, and many more!
+            When I have some free time I usually try to learn rust-lang.    
           </div>
 
           <Link to="/projects" className="btn-wrapper">

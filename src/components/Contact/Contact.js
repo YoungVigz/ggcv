@@ -17,8 +17,8 @@ function Contact() {
             , or <br/> create something <span className="contact__headline--primary"> amazing?</span>
           </div>
           <div className="contact__text">
-            Phone: 999 999 999 <br/>
-            E-mail: example@gmail.com
+            Github: <a className="link" href="https://github.com/MCgabi">MCgabi</a> <br/>
+            E-mail: gabrielgaleza@gmail.com 
           </div>
         </div>
       </div>
