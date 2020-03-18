@@ -27,24 +27,32 @@ class Table extends Component {
         const { repos } = this.state;
 
         return (
-            <table className="project__table">
+            <table className="project__table" margin="10">
                 <tr className="project__table__head">
                     <th className="project__table__head__item">Name</th>
                     <th className="project__table__head__item">Language</th>
                     <th className="project__table__head__item">Stars</th>
                 </tr>
 
-                {repos.map((repo, index) => (
-                    <tr className="project__table__body" key={index}>
-                        <th className="project__table__body__item">
-                            <a href={repo[1]} target="blank">
-                                {repo[0] || '-'}
-                            </a>
-                        </th>
-                        <th className="project__table__body__item">{repo[2] || '-'}</th>
-                        <th className="project__table__body__item">{repo[3] || '0'}</th>
-                    </tr>  
-                ))}
+                {repos.map((repo, index) => {
+                    if(repo[0].length > 10) {
+                        console.log(repo[0])
+                        repo[0] = repo[0].slice(0, 10) + '..'
+                        console.log(repo[0])
+                    }
+
+                    return (
+                        <tr className="project__table__body" key={index}>
+                            <th className="project__table__body__item">
+                                <a href={repo[1]} target="blank">
+                                    {repo[0] || '-'}
+                                </a>
+                            </th>
+                            <th className="project__table__body__item">{repo[2] || '-'}</th>
+                            <th className="project__table__body__item">{repo[3] || '0'}</th>
+                        </tr>  
+                    )
+                })}
             </table>
         );
     }
