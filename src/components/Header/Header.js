@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 
 import './Header.scss';
 
+const update = () => {
+  const menu = document.querySelector(".header__menu");
+  menu.classList.toggle('header__menu--active');
+}
+
 function Header() {
   return (
     <>
@@ -15,13 +20,17 @@ function Header() {
           <div className="header__nav__link"><Link to="/contact">Contact</Link></div>
         </nav>  
 
-        <nav className="header__menu">
-          <div className=""></div>
+        <div className="header__hamburger" onClick={update.bind()}>
+          <div className="header__hamburger__element"></div>
+          <div className="header__hamburger__element"></div>
+          <div className="header__hamburger__element"></div>
+        </div>
 
-          <div className="header__menu__link">Home</div>
-          <div className="header__menu__link">About</div>
-          <div className="header__menu__link">Projects</div>
-          <div className="header__menu__link">Contact</div>
+        <nav className="header__menu">
+          <div className="header__menu__link"><Link to="/" onClick={update.bind()}>Home</Link></div>
+          <div className="header__menu__link"><Link to="/about" onClick={update.bind()}>About</Link></div>
+          <div className="header__menu__link"><Link to="/projects" onClick={update.bind()}>Projects</Link></div>
+          <div className="header__menu__link"><Link to="/contact" onClick={update.bind()}>Contact</Link></div>
         </nav>
       </header>
     </>

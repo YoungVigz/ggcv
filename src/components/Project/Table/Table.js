@@ -36,9 +36,7 @@ class Table extends Component {
 
                 {repos.map((repo, index) => {
                     if(repo[0].length > 10) {
-                        console.log(repo[0])
                         repo[0] = repo[0].slice(0, 10) + '..'
-                        console.log(repo[0])
                     }
 
                     return (
