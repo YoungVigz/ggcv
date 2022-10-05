@@ -11,7 +11,7 @@ class Table extends Component {
     }
 
     componentDidMount() {
-        Axios.get('https://api.github.com/users/MCgabi/repos').then(res => {
+        Axios.get('https://api.github.com/users/YoungVigz/repos').then(res => {
             const data = [];
 
             res.data.sort((a, b) => b.id - a.id);

@@ -17,7 +17,7 @@ function Contact() {
             , or <br/> create something <span className="contact__headline--primary"> amazing?</span>
           </div>
           <div className="contact__text">
-            Github: <a className="link" href="https://github.com/MCgabi">MCgabi</a> <br/>
+            Github: <a className="link" href="https://github.com/YoungVigz">Young Vigz</a> <br/>
             E-mail: gabrielgaleza@gmail.com 
           </div>
         </div>
